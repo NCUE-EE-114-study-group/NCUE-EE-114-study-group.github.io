@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCUE EE 114 Study Group</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- 自訂程式 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 添加點擊事件到導航項目
+            document.querySelectorAll('.navbar-nav .nav-item .nav-link').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // 防止預設點擊行為
+
+                    let targetId = this.getAttribute('href'); // 獲取目標元素的 ID
+                    let targetElement = document.querySelector(targetId); // 獲取目標元素
+
+                    if (targetElement) {
+                        let offsetTop = targetElement.offsetTop; // 獲取元素的頂部位置
+                        let offset = 70; // 預留的空間，根據需要調整
+
+                        window.scrollTo({ 
+                            top: offsetTop - offset, // 計算最終滾動位置
+                            behavior: "smooth" // 平滑滾動效果
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://github.com/NCUE-EE-114-study-group">NCUE EE 114</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">關於我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">專長</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">聯絡方式</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- MainBanner 主橫幅 -->
+    <div class="main-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>NCUE EE Study Group</h1>
+                    <p>國立彰化師範大學 智慧工程學系 114級</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Me 關於我 -->
+    <section id="about" class="container my-5 material-section">
+        <h2>關於讀書會</h2>
+        <p>一個致力於創造優質、共享學習環境的社群。起源於彰化師範大學的一個小團體，由一群對學習充滿熱情的人發起。</p>
+        <p>在這裡，我們相信知識的力量和共同學習的價值。我們的目標是通過互助和交流，創建一個既鼓勵個人成長又促進集體進步的環境。</p>
+    </section>    
+    <!-- Skills 技能 -->
+    <section id="skills" class="container my-5 material-section">
+        <h2>我們的專業</h2>
+        <p>在這個快速變化的時代，我們致力於提供最前沿的學習資源和專業課程，幫助你保持與時俱進。</p>
+        <div class="row skill-box">
+            <!-- 電力 -->
+            <div class="skill-item-lg col-11 swot-item" data-category="strengths">
+                <h3>電力系統研究</h3>
+                <p>探索最新的電力網路技術，學習如何應用理論知識解決實際問題，並透過實戰項目提升技能。</p>
+            </div>
+            <!-- 控制技術 -->
+            <div class="skill-item-lg col-11 swot-item" data-category="weaknesses">
+                <h3>控制技術實踐</h3>
+                <p>提供實踐導向的學習機會，幫助你從理論走向實際應用，提高在控制技術領域的專業水平。</p>
+            </div>
+            <!-- 自動化與創新 -->
+            <div class="skill-item-lg col-11 swot-item" data-category="opportunities">
+                <h3>自動化與創新</h3>
+                <p>隨著科技的進步，我們提供最新的學習資源和項目，讓你在自動化和創新領域保持領先。</p>
+            </div>
+            <!-- 教育研究與發展 -->
+            <div class="skill-item-lg col-11 swot-item" data-category="threats">
+                <h3>教育研究與發展</h3>
+                <p>面對快速變化的技術領域，我們不斷更新教學內容和方法，確保你能夠獲得最新最有效的學習體驗。</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact 聯絡方式 -->
+    <section id="contact" class="container my-5 material-section text-center">
+        <h2>GitHub貢獻</h2>
+        <p>有興趣合作或者交流？我們的公開Github在這</p>
+        <div>
+            <!-- GitHub Icon -->
+            <a href="https://github.com/NCUE-EE-114-study-group" class="fa d-block mb-3">
+                <i class="fab fa-github fa-2x"></i>
+                <p>GitHub</p>
+            </a>
+        </div>
+    </section>
+    <!-- Footer 頁尾 -->
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © Copyright 2023 NCUE EE 114 Reading Club
+        </div>
+    </footer>
+    <!-- 載入Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

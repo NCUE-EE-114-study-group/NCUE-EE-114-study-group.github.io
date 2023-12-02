@@ -1,0 +1,191 @@
+body { padding-top: 56px; }
+.navbar-collapse {
+    justify-content: flex-end; /* 向右對齊 */
+}
+/* 導航列風格 */
+.navbar {
+    background-color: #ebdfbb !important; /* 奶黃色背景，與主體風格一致 */
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); /* 添加陰影 */
+}
+@media screen and (max-width: 767px) {
+    .navbar {
+        padding-top: 1.2rem; /* 上方間隔 */
+        padding-bottom: 1.2rem; /* 下方間隔 */
+    }
+    
+}
+
+/* 導航品牌名稱風格 */
+.navbar-brand {
+    color: #5d4037 !important; /* 深棕色 */
+}
+
+/* 導航項目風格 */
+.nav-link {
+    color: #795548 !important; /* 棕色，使用 !important 以覆蓋 BS5 的預設顏色 */
+    font-weight: bold; /* 粗體 */
+}
+
+/* 導航項目懸停效果 */
+.nav-link:hover {
+    color: #3e2723 !important; /* 更深的棕色，添加懸停效果 */
+}
+
+/* 在小屏幕上，避免導航列遮蓋內容 */
+@media (max-width: 767px) {
+    body { padding-top: 76px; }
+}
+
+.main-banner {
+    height: 400px; /* 增加高度 */
+    background: url('f5aba63c-82f0-4417-ba61-40c6146dfe23.jpg'); /* 更換背景圖片 */
+    background-size: cover;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    position: relative; /* 為底部文字定位 */
+
+}
+.main-banner h1 {
+    font-size: 4rem; /* 增加字體大小 */
+    color: #ffffff; /* 字體顏色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字陰影 */
+}
+
+.main-banner p{
+    font-size: 2rem; /* 增加字體大小 */
+    color: #ffffff; /* 字體顏色 */
+    /* 粗體 */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字陰影 */
+}
+
+.floating-effect {
+    animation: float 3s ease-in-out infinite; /* 添加浮動效果 */
+}
+.main-banner-text {
+    position: absolute;
+    bottom: 20px; /* 放在底部 */
+    left: 45%;
+    transform: translateX(-50%); /* 水平居中 */
+    color: #252222; /* 文字顏色 */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5); /* 文字陰影 */
+    text-align: center; /* 文字居中 */
+}
+
+/* 在小尺寸的螢幕（例如手機）上的樣式 */
+@media (max-width: 575px) {
+    .main-banner-text {
+        left: 40%;
+    }
+}
+
+/* 在更小尺寸的螢幕上 */
+@media (max-width: 479px) {
+    .main-banner-text {
+        left: 35%;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-banner h1 {
+        font-size: 2.5rem; /* 適用於小屏幕的字體大小 */
+    }
+    .main-banner p{
+        font-size: 1.5rem; /* 適用於小屏幕的字體大小 */
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+/* Material Design 風格的基本設置 */
+.material-section {
+    background-color: #fff8e1; /* 奶黃色背景 */
+    border-radius: 15px; /* 圓角邊框 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 輕微的陰影效果 */
+    margin-bottom: 30px; /* 底部間隔 */
+    padding: 20px; /* 內部填充 */
+    transition: box-shadow 0.3s; /* 陰影過渡效果 */
+}
+
+.material-section:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3); /* 滑鼠懸停時的陰影效果 */
+}
+
+/* 標題風格 */
+.material-section h2 {
+    color: #795548; /* 棕色 */
+    margin-bottom: 20px; /* 底部間隔 */
+    font-weight: bold; /* 粗體 */
+}
+
+/* 文本風格 */
+.material-section p {
+    color: #5d4037; /* 深棕色 */
+}
+
+
+/* SWOT 分析項目的基本樣式 */
+.swot-item {
+    background-color: #fff8e1; /* 奶黃色背景 */
+    border-radius: 15px; /* 圓角邊框 */
+    border: 2px solid #bcaaa4; /* 深色邊框 */
+    margin: 5px; /* 間隔 */
+    padding: 15px; /* 內部填充 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 過渡效果 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* 輕微的陰影效果 */
+}
+
+@media (min-width: 992px){
+    .skill-item-lg{
+        width: 23%; /* 每行 4 個子容器 */
+    }
+}
+
+.swot-item:hover {
+    transform: scale(1.05); /* 滑鼠懸停時放大 */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3); /* 增強陰影效果 */
+}
+
+/* 根據不同類別變更邊框顏色 */
+.swot-item[data-category="strengths"] {
+    border-color: #388e3c; /* 綠色 */
+}
+
+.swot-item[data-category="weaknesses"] {
+    border-color: #d32f2f; /* 紅色 */
+}
+
+.swot-item[data-category="opportunities"] {
+    border-color: #1976d2; /* 藍色 */
+}
+
+.swot-item[data-category="threats"] {
+    border-color: #ffa000; /* 橙色 */
+}
+.skill-box{
+    /* 水平距離相等 */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 手機板 skill-box */
+@media (max-width: 991px){
+    .skill-box > div{
+        box-sizing: content-box!important;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(93, 64, 55, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+
+/* 聯絡方式區塊的風格 */
+.fa {
+    color: #5d4037; /* 深棕色 */
+    margin-right: 10px; /* 圖標與文字之間的間隔 */
+}
